@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS customer
 CREATE TABLE IF NOT EXISTS transaction
 (
     id          BIGINT AUTO_INCREMENT NOT NULL,
+    amount      DECIMAL,
     description VARCHAR(100),
     date        TIMESTAMP,
     account_id  BIGINT,
