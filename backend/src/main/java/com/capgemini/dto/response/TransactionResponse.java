@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -17,12 +18,15 @@ public class TransactionResponse {
 
     private Long id;
 
+    private BigDecimal amount;
+
     private String description;
 
     private LocalDateTime date;
 
     public TransactionResponse(Transaction transaction) {
         this.id = transaction.getId();
+        this.amount = transaction.getAmount();
         this.description = transaction.getDescription();
         this.date = transaction.getDate();
     }

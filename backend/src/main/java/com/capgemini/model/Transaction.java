@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -15,6 +16,8 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private BigDecimal amount;
 
     @Column(length = 100)
     private String description;
@@ -31,6 +34,7 @@ public class Transaction {
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
         return Objects.equals(id, that.id) &&
+                Objects.equals(amount, that.amount) &&
                 Objects.equals(description, that.description) &&
                 Objects.equals(date, that.date) &&
                 Objects.equals(account, that.account);
@@ -38,6 +42,6 @@ public class Transaction {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description, date, account);
+        return Objects.hash(id, amount, description, date, account);
     }
 }
