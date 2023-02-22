@@ -50,11 +50,13 @@ public class TransactionService {
      */
     @Transactional(readOnly = true)
     public List<TransactionResponse> findAllByCustomerId(Long customerId) {
-        final List<Transaction> transactions = transactionRepository.findAllByCustomerId(customerId);
+        final List<TransactionResponse> transactions = transactionRepository.findAllByCustomerId(customerId).stream()
+                .map(TransactionResponse::new).toList();
+
         if (transactions.isEmpty()) {
             log.error(NOT_FOUND_RECORD);
             throw new NoSuchElementFoundException(NOT_FOUND_RECORD);
         }
-        return transactions.stream().map(TransactionResponse::new).toList();
+        return transactions;
     }
 }
