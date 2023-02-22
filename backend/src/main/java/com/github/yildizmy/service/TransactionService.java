@@ -50,7 +50,7 @@ public class TransactionService {
      */
     @Transactional(readOnly = true)
     public List<TransactionResponse> findAllByCustomerId(Long customerId) {
-        final List<TransactionResponse> transactions = transactionRepository.findAllByCustomerId(customerId).stream()
+        final List<TransactionResponse> transactions = transactionRepository.findAllByAccountCustomerId(customerId).stream()
                 .map(TransactionResponse::new).toList();
 
         if (transactions.isEmpty()) {
