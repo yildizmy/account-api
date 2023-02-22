@@ -69,14 +69,14 @@ git clone https://github.com/yildizmy/account-api.git
 
 <br/>
 
-4. Open command prompt window. Change the current directory to the project directory where the `docker-compose.yml` file is in:
+3. Open command prompt window. Change the current directory to the project directory where the `docker-compose.yml` file is in:
 
 ```
 cd account-api
 ```
 <br/>
 
-5. And run the following command:
+4. And run the following command:
 
 ```
 docker-compose up --build
@@ -86,7 +86,7 @@ docker-compose up --build
 
 
 
-6. Then the application containers start up after build. This process can take several minutes based on the internet connection. After this step is completed, send request to the endpoints. For this purpose, see the details on [How to test?](how_to_test.md) section.
+5. Then the application containers start up after build. This process can take several minutes based on the internet connection. After this step is completed, send request to the endpoints. For this purpose, see the details on [How to test?](how_to_test.md) section.
 
 
 <br/>
