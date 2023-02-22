@@ -25,10 +25,7 @@ public class CustomerResponse {
     private Set<TransactionResponse> transactions;
 
     public CustomerResponse(Customer customer) {
-        this.id = customer.getId();
-        this.name = customer.getName();
-        this.surname = customer.getSurname();
-        this.email = customer.getEmail();
+        this(customer, null, null);
     }
 
     public CustomerResponse(Customer customer, BigDecimal balance, Set<TransactionResponse> transactions) {
