@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="Default" defaultSearchScope="Project">
         <packages>
-          <package value="com.capgemini" />
+          <package value="com.github.yildizmy" />
         </packages>
       </persistence-unit>
     </persistence-units>

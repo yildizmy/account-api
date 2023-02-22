@@ -41,7 +41,7 @@ logging:
   level:
     org.springframework: error
     org.hibernate: error
-    com.capgemini: debug
+    com.github.yildizmy: debug
   file:
     name: './logs/application.log'
 

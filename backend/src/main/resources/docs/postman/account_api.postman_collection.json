@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "10cb36ae-940a-49b0-b6c1-254e32bd74cb",
-		"name": "capgemini",
+		"name": "account-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17805997"
 	},
