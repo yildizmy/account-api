@@ -29,7 +29,7 @@ export default function TransactionTable(props) {
       .catch((error) => {
         setAlert(error.response.data.message, "error");
       });
-  }, [setTransactions, setAlert, id]);
+  }, [setTransactions]);
 
   const columns = [
     {
