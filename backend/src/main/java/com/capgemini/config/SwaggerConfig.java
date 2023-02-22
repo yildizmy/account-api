@@ -19,8 +19,8 @@ import java.util.List;
 @Configuration
 public class SwaggerConfig {
 
-    private static final String TITLE = "Recipe API";
-    private static final String DESCRIPTION = "Application used for managing Recipe data";
+    private static final String TITLE = "Account API";
+    private static final String DESCRIPTION = "Application used for managing Account data";
     private static final String VERSION = "1.0";
     private static final String TERMS_OF_SERVICE_URL = null;
     private static final String LICENSE = null;
