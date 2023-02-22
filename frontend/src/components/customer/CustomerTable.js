@@ -50,6 +50,12 @@ export default function CustomerTable({ customers, setCustomers }) {
       responsive: ["sm"]
     },
     {
+      title: "email",
+      dataIndex: "email",
+      key: "email",
+      responsive: ["sm"]
+    },
+    {
       title: "Balance",
       dataIndex: "balance",
       key: "balance",
@@ -75,6 +81,7 @@ export default function CustomerTable({ customers, setCustomers }) {
       id: customer.id,
       name: customer.name,
       surname: customer.surname,
+      email: customer.email,
       balance: customer.balance,
     };
   });
