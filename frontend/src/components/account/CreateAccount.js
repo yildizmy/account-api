@@ -27,7 +27,7 @@ export default function CreateAccount() {
   const addAccount = (values) => {
     const accountObject = {
       customerId: values.customerId,
-      balance: values.balance,
+      balance: values.initialAmount,
     };
     AccountService.create(accountObject)
       .then((newAccount) => {
@@ -117,7 +117,7 @@ export default function CreateAccount() {
                   </Form.Item>
 
                   <Form.Item
-                    name="balance"
+                    name="initialAmount"
                     label="Initial Amount"
                     rules={[
                       {
