@@ -20,7 +20,7 @@ export default function ResponsiveAppBar() {
                 style={{
                   cursor: "pointer",
                   textDecoration: "none",
-                  paddingRight: "10px",
+                  paddingRight: "15px",
                 }}
               >
                 <Button
