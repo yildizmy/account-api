@@ -1,9 +1,9 @@
 ## Account API
-Spring Boot app used for manipulating some account operations for demo purposes. 
+Fullstack (Spring Boot & React) demo app used for manipulating some account and customer data. 
 
 
 ### Description
-The application allows users to open a new “current account” of already existing customers. It also displays the user information showing name, surname, balance, and
+This demo application allows users to open a new “current account” of already existing customers. It also displays the user information showing name, surname, balance, and
 transactions of the accounts.
 
 
