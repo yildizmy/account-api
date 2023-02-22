@@ -7,9 +7,9 @@ This demo application allows users to open a new “current account” of alread
 transactions of the accounts.
 
 
-### Architecture
+### Entities
 
-The information about the entity relationship is shown on [Architecture](backend/src/main/resources/docs/architecture.md) section.
+The information about the entity relationship is shown on [ER Diagram](backend/src/main/resources/docs/er_diagram.md) section.
 
 
 ### Getting Started
