@@ -27,15 +27,15 @@ export default function AccountTable({ accounts, setAccounts }) {
       .catch((error) => {
         setAlert(error.response.data.message, "error");
       });
-  }, [setAccounts, setAlert]);
+  }, [setAccounts]);
 
   const columns = [
     {
-      title: "Account No",
+      title: "Account Id",
       dataIndex: "id",
       key: "id",
       responsive: ["sm"],
-      width: 120,
+      width: 120
     },
     {
       title: "Customer Name",
@@ -49,6 +49,7 @@ export default function AccountTable({ accounts, setAccounts }) {
       key: "balance",
       responsive: ["sm"],
       align: "right",
+      width: 150
     },
   ];
 
