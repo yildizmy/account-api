@@ -61,7 +61,7 @@ export default function CustomerTable({ customers, setCustomers }) {
       key: "balance",
       responsive: ["sm"],
       align: "right",
-      width: 150
+      width: 120
     },
     {
       title: "Actions",
