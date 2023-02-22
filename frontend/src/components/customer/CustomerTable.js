@@ -27,20 +27,27 @@ export default function CustomerTable({ customers, setCustomers }) {
       .catch((error) => {
         setAlert(error.response.data.message, "error");
       });
-  }, [setCustomers, setAlert]);
+  }, [setCustomers]);
 
   const columns = [
+    {
+      title: "Customer Id",
+      dataIndex: "id",
+      key: "id",
+      responsive: ["sm"],
+      width: 120
+    },
     {
       title: "Name",
       dataIndex: "name",
       key: "name",
-      responsive: ["sm"],
+      responsive: ["sm"]
     },
     {
       title: "Surname",
       dataIndex: "surname",
       key: "surname",
-      responsive: ["sm"],
+      responsive: ["sm"]
     },
     {
       title: "Balance",
@@ -48,6 +55,7 @@ export default function CustomerTable({ customers, setCustomers }) {
       key: "balance",
       responsive: ["sm"],
       align: "right",
+      width: 150
     },
     {
       title: "Actions",
