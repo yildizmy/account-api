@@ -10,7 +10,7 @@ services:
     depends_on:
       - backend
     networks:
-      - docker-net
+      - account-api-net
 
   backend:
     container_name: backend-docker
@@ -19,7 +19,7 @@ services:
     ports:
       - '8080:8080'
     networks:
-      - docker-net
+      - account-api-net
     logging:
       driver: 'json-file'
       options:
@@ -27,5 +27,5 @@ services:
         max-file: '5'
 
 networks:
-  docker-net:
+  account-api-net:
     driver: bridge
