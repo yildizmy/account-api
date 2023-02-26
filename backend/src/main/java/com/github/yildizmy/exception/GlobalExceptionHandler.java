@@ -28,7 +28,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     /**
      * This parameter is used to print StackTrace while debugging (default value is false).
      */
-    @Value("${reflectoring.trace:false}")
+    @Value("${exception.trace:false}")
     private boolean printStackTrace;
 
     /**

@@ -56,5 +56,5 @@ server:
     include-message: always
 
 # custom properties
-reflecting:
-  trace: 'true'
+exception:
+  trace: true
