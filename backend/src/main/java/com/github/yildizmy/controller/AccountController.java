@@ -7,6 +7,7 @@ import com.github.yildizmy.dto.response.CommandResponse;
 import com.github.yildizmy.service.AccountService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,6 +48,8 @@ public class AccountController {
     @PostMapping
     public ResponseEntity<ApiResponse<CommandResponse>> create(@Valid @RequestBody AccountRequest request) {
         final CommandResponse response = accountService.create(request.getCustomerId(), request.getBalance());
-        return ResponseEntity.ok(new ApiResponse<>(Instant.now(clock).toEpochMilli(), SUCCESS, response));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(new ApiResponse<>(Instant.now(clock).toEpochMilli(), SUCCESS, response));
     }
 }
