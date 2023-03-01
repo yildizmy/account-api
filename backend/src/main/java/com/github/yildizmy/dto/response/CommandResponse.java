@@ -1,13 +1,13 @@
 package com.github.yildizmy.dto.response;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 
 /**
  * Data Transfer Object used for returning id value of the saved entity
  */
-@Value
+@Data
 @RequiredArgsConstructor
 @Builder
 public class CommandResponse {
