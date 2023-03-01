@@ -15,13 +15,13 @@ public class CustomerRequest {
 
     @Size(min = 3, max = 50)
     @NotBlank
-    private String name;
+    String name;
 
     @Size(min = 3, max = 50)
     @NotBlank
-    private String surname;
+    String surname;
 
     @Email(message = EMAIL_NOT_VALID)
     @Size(min = 5, max = 50)
-    private String email;
+    String email;
 }
