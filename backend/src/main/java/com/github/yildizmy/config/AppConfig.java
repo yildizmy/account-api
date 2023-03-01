@@ -10,15 +10,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.time.format.DateTimeFormatter;
 
+import static com.github.yildizmy.common.Constants.*;
+
 /**
  * Configuration file for the application
  */
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
-
-    private static final String DATE_FORMAT = "dd.MM.yyyy";
-    private static final String DATE_TIME_FORMAT = "dd.MM.yyyy HH:mm:ss";
-    private static final String ALLOWED_ORIGINS = "http://localhost:3000";
 
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer jsonCustomizer() {

@@ -9,6 +9,10 @@ public final class Constants {
     }
 
     public static final String TRACE = "trace";
+    public static final String DATE_FORMAT = "dd.MM.yyyy";
+    public static final String DATE_TIME_FORMAT = "dd.MM.yyyy HH:mm:ss";
+    public static final String ALLOWED_ORIGINS = "http://localhost:3000";
+
     public static final String SUCCESS = "Success";
     public static final String TRANSACTION_DESCRIPTION = "Transaction to %s %s with the amount of %.2f";
     public static final String VALIDATION_ERROR = "Validation error. Check 'errors' field for details";
