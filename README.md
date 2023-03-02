@@ -9,7 +9,7 @@ transactions of the accounts.
 
 ### Entities
 
-The information about the entity relationship is shown on [ER Diagram](backend/src/main/resources/docs/er_diagram.md) section.
+The information about the entity relationship is shown on [Entity Relationship Diagram](backend/src/main/resources/docs/er_diagram.md) section.
 
 
 ### Getting Started
