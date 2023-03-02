@@ -1,4 +1,4 @@
-## ER Diagram
+## Entity Relationship Diagram
 
 The entity relationship in the project is shown on the following diagram:
 
