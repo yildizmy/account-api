@@ -40,15 +40,14 @@ public class Account {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Account)) return false;
         Account account = (Account) o;
-        return Objects.equals(id, account.id) &&
-                Objects.equals(balance, account.balance) &&
-                Objects.equals(customer, account.customer);
+        return getId() != null &&
+                Objects.equals(getId(), account.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, balance, customer);
+        return getClass().hashCode();
     }
 }

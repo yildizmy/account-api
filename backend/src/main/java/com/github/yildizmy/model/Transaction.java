@@ -31,17 +31,14 @@ public class Transaction {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Transaction that = (Transaction) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(amount, that.amount) &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(date, that.date) &&
-                Objects.equals(account, that.account);
+        if (!(o instanceof Transaction)) return false;
+        Transaction transaction = (Transaction) o;
+        return getId() != null &&
+                Objects.equals(getId(), transaction.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, amount, description, date, account);
+        return getClass().hashCode();
     }
 }
