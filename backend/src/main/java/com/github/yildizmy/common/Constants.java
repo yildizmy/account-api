@@ -23,6 +23,7 @@ public final class Constants {
     public static final String NOT_FOUND_CUSTOMER = "Requested customer is not found";
     public static final String ALREADY_EXISTS = "Requested element already exists";
     public static final String ALREADY_EXISTS_CUSTOMER = "Customer with the same email already exists";
+    public static final String ACCOUNT_CREATED = "Account is created";
     public static final String TRANSACTION_ADDED = "Transaction is added to the account";
     public static final String INITIAL_AMOUNT_EQUAL_OR_GREATER_ZERO = "Initial amount must be equal to or greater than zero";
 }

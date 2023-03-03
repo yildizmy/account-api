@@ -14,8 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static com.github.yildizmy.common.Constants.NOT_FOUND_RECORD;
-import static com.github.yildizmy.common.Constants.TRANSACTION_ADDED;
+import static com.github.yildizmy.common.Constants.*;
 
 /**
  * Service used for Account related tasks
@@ -40,10 +39,8 @@ public class AccountService {
                 .map(AccountResponse::new)
                 .toList();
 
-        if (accounts.isEmpty()) {
-            log.error(NOT_FOUND_RECORD);
+        if (accounts.isEmpty())
             throw new NoSuchElementFoundException(NOT_FOUND_RECORD);
-        }
         return accounts;
     }
 
@@ -69,6 +66,7 @@ public class AccountService {
         account.setCustomer(customer);
         account.setBalance(initialCredit);
         accountRepository.save(account);
+        log.info(ACCOUNT_CREATED);
         return CommandResponse.builder().id(account.getId()).build();
     }
 }
