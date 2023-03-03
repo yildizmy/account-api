@@ -40,10 +40,8 @@ public class CustomerService {
      * @return
      */
     public Customer getEntityById(Long id) {
-        return customerRepository.findById(id).orElseThrow(() -> {
-            log.error(NOT_FOUND_CUSTOMER);
-            return new EntityNotFoundException(NOT_FOUND_CUSTOMER);
-        });
+        return customerRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(NOT_FOUND_CUSTOMER));
     }
 
     /**
@@ -53,10 +51,8 @@ public class CustomerService {
      * @return
      */
     public CustomerResponse findById(Long id) {
-        return customerRepository.findById(id).map(CustomerResponse::new).orElseThrow(() -> {
-            log.error(NOT_FOUND_CUSTOMER);
-            return new NoSuchElementFoundException(NOT_FOUND_CUSTOMER);
-        });
+        return customerRepository.findById(id).map(CustomerResponse::new)
+                .orElseThrow(() -> new NoSuchElementFoundException(NOT_FOUND_CUSTOMER));
     }
 
     /**
@@ -74,10 +70,8 @@ public class CustomerService {
                                 .map(TransactionResponse::new)).collect(Collectors.toSet())))
                 .toList();
 
-        if (customers.isEmpty()) {
-            log.error(NOT_FOUND_RECORD);
+        if (customers.isEmpty())
             throw new NoSuchElementFoundException(NOT_FOUND_RECORD);
-        }
         return customers;
     }
 
@@ -88,13 +82,12 @@ public class CustomerService {
      * @return id of created customer
      */
     public CommandResponse create(CustomerRequest request) {
-        if (customerRepository.existsByEmailIgnoreCase(request.getEmail())) {
-            log.error(ALREADY_EXISTS_CUSTOMER);
+        if (customerRepository.existsByEmailIgnoreCase(request.getEmail()))
             throw new ElementAlreadyExistsException(ALREADY_EXISTS_CUSTOMER);
-        }
 
         final Customer customer = customerRequestMapper.toEntity(request);
         customerRepository.save(customer);
+        log.info(CUSTOMER_CREATED);
         return CommandResponse.builder().id(customer.getId()).build();
     }
 }
