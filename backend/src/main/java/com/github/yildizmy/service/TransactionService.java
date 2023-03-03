@@ -14,8 +14,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.github.yildizmy.common.Constants.NOT_FOUND_RECORD;
-import static com.github.yildizmy.common.Constants.TRANSACTION_DESCRIPTION;
+import static com.github.yildizmy.common.Constants.*;
 
 /**
  * Service used for Transaction related tasks
@@ -39,6 +38,7 @@ public class TransactionService {
         transaction.setAmount(initialCredit);
         transaction.setDescription(String.format(TRANSACTION_DESCRIPTION, customer.getName(), customer.getSurname(), initialCredit));
         transaction.setDate(LocalDateTime.now());
+        log.info(TRANSACTION_GENERATED);
         return transaction;
     }
 
@@ -53,10 +53,8 @@ public class TransactionService {
         final List<TransactionResponse> transactions = transactionRepository.findAllByAccountCustomerId(customerId).stream()
                 .map(TransactionResponse::new).toList();
 
-        if (transactions.isEmpty()) {
-            log.error(NOT_FOUND_RECORD);
+        if (transactions.isEmpty())
             throw new NoSuchElementFoundException(NOT_FOUND_RECORD);
-        }
         return transactions;
     }
 }
