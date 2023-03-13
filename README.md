@@ -1,5 +1,5 @@
 ## Account API
-Fullstack (Spring Boot & React) demo app used for manipulating some account and customer data. 
+Full stack web app with React and Spring Boot, used for manipulating some account and customer data. 
 
 
 ### Description
