@@ -79,7 +79,7 @@ cd account-api
 4. And run the following command:
 
 ```
-docker-compose up --build
+docker compose up --build
 ```
 
 <br/>
@@ -94,7 +94,7 @@ docker-compose up --build
 ### Troubleshooting
 
 * If there is any process using the same port of with the application (port 3000), _"port is already in use"_ error is
-  encountered. In this situation, terminating that process and restarting the related containers will fix the problem. If it is not solved, try to run `docker-compose up --build` command again.
+  encountered. In this situation, terminating that process and restarting the related containers will fix the problem. If it is not solved, try to run `docker compose up --build` command again.
 
 <br/>
 
